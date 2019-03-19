@@ -5,35 +5,43 @@
  */
 package com.springlearning.selfinit;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
 /**
  *
  * @author garny
  */
-@component
+@Component
 public class binarySearchImp {
     
     /**sorting an array
      * searching an array
      * returning result
      */
-    public int binarySearch(int[]numbers,int numberToSearchFor){
-       @autowired
-        private SortAlgorithm sortAlgorithm;
+    @Autowired
+    private final SortAlgorithm sortAlgorithm;
 
     public binarySearchImp(SortAlgorithm sortAlgorithm) {
+        super();
         this.sortAlgorithm = sortAlgorithm;
     }
+    
+    
+    
+    
+    public int binarySearch(int[]numbers,int numberToSearchFor){
         
         
+            
+        int[] sortedNumbers = sortAlgorithm.sort(numbers);
         
-        
-        bubbleSortAlgorithm bubbleSort =new bubbleSortAlgorithm();
-        int[] sortedNumbers = bubbleSort.sort(numbers);
+        System.out.println(sortAlgorithm);
         
         //implement search logic
         //bubble sort algorithm
         //quick sort algorithm
         return 3;
     }
-    
+
 }

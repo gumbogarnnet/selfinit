@@ -5,22 +5,17 @@
  */
 package com.springlearning.selfinit;
 
-import org.springframework.stereotype.Component;
-
 /**
  *
  * @author garny
  */
-@Component
-public class bubbleSortAlgorithm implements SortAlgorithm {
-
-        public int[] sort(int[] numbers){
+public class quickSortAlgorithm implements SortAlgorithm {
+    
+    public int[] sort(int[] numbers){
         
-        //logic for bubble sort
+        //logic for quick sort
         
         return numbers;
-        
-        
     }
     
 }
